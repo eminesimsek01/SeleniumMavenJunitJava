@@ -33,7 +33,6 @@ public class C04_LocatorPractice {
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
-
     }
     @After
     public void tearDown(){
@@ -78,6 +77,5 @@ public class C04_LocatorPractice {
         //Submitted Values yazısının görüntülendiğini doğrula
         WebElement submittedValuesText=driver.findElement(By.xpath("//p[text()='Submitted Values']"));
         Assert.assertTrue(submittedValuesText.isDisplayed());
-
     }
 }
