@@ -44,5 +44,23 @@ public class C02_LocatorPractice {
         WebElement results=driver.findElement(By.id("result-stats"));
         System.out.println("results = " + results.getText());
     }
+    @Test
+    public void test02() {
+        WebElement search=driver.findElement(By.name("q"));
+        search.sendKeys("Premonition"+ Keys.ENTER);
+
+        WebElement results=driver.findElement(By.id("result-stats"));
+        System.out.println("results = " + results.getText());
+    }
+    @Test
+    public void test03() {
+        WebElement search=driver.findElement(By.name("q"));
+        search.sendKeys("The Curious Case of Benjamin Button"+ Keys.ENTER);
+
+        WebElement results=driver.findElement(By.id("result-stats"));
+        System.out.println("results = " + results.getText());
+    }
+
+
 
 }

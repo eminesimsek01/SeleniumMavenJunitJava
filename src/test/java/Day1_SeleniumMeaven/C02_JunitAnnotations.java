@@ -53,8 +53,8 @@ public class C02_JunitAnnotations {
     public static void afterAll(){
         System.out.println("Method'ların sonrasında kod bloğu çalıştı");
     } //Beforeclass ve Afterclass tüm classı çalıştıracağı için metodlar statik olmalı
-    //1. Method beforeAll() should be static
-    //  2. Method afterAll() should be static
+      //1. Method beforeAll() should be static
+      //  2. Method afterAll() should be static
 
 
 }
