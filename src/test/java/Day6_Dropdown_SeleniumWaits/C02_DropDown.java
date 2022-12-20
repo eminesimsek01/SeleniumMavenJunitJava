@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.List;
 
 public class C02_DropDown {
     WebDriver driver;
@@ -38,14 +39,47 @@ public class C02_DropDown {
     }
     @Test
     public void selectbyValue(){
+        driver.get("https://demo.guru99.com/test/newtours/register.php\n");
+        WebElement dropDown=driver.findElement(By.name("country"));
+        Select select=new Select(dropDown);
+        select.selectByValue("TURKEY");
+    }
+    @Test
+    public void selectByVisibleText(){
+        driver.get("https://demo.guru99.com/test/newtours/register.php\n");
+        WebElement dropDown=driver.findElement(By.name("country"));
+        Select select=new Select(dropDown);
+        select.selectByVisibleText("BELARUS");
 
     }
     @Test
-    public void test03(){
+    public void multipleSelect(){
+        driver.get("https://output.jsbin.com/osebed/2");
+        Select select =new Select(driver.findElement(By.id("fruits")));
+        System.out.println("select.isMultiple() = " + select.isMultiple());
+        select.selectByValue("apple");
+        select.selectByIndex(3);
+    }
+    @Test
+    public void getOptions(){
+        driver.get("https://demo.guru99.com/test/newtours/register.php");
+        Select select =new Select(driver.findElement(By.name("country")));
+        List<WebElement>options=select.getOptions();
+        for(WebElement option:options){
+            System.out.println("option.getText() = " + option.getText());
+        }
+    }
+    @Test
+    public void getFirstSelectedOption(){
+        //GetFirstSelectedOption metodu seçilmiş olan optionlardan ilk seçili olanı verir.
+        driver.get("https://output.jsbin.com/osebed/2");
+        Select select=new Select(driver.findElement(By.id("fruits")));
+        select.selectByIndex(3);//Garape
+        select.selectByIndex(2);//Orange
+        WebElement selectedfirstoption=select.getFirstSelectedOption();
+        System.out.println("selectedfirstoption = " + selectedfirstoption.getText());
 
     }
-
-
     @After
     public void tearDown(){
         driver.quit();
