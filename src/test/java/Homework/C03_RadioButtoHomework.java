@@ -9,6 +9,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -27,26 +29,33 @@ public class C03_RadioButtoHomework {
     @Test
     public void radioButtonTest() throws InterruptedException {
             driver.get("https://demoqa.com/radio-button");
-            WebElement yesButton=driver.findElement(By.xpath("//input[@type='radio'and@id='yesRadio']"));
-                 if (yesButton.isSelected()) {
-                 yesButton.click();}
+            WebElement yesButton=driver.findElement(By.xpath("//label[@for='yesRadio']"));
+
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+            if (!yesButton.isSelected()) {
+                wait.until(ExpectedConditions.elementToBeClickable(yesButton)).click();
+                }
+
+                Thread.sleep(3000);
             WebElement yesButtonText=  driver.findElement(By.xpath("//p[@class='mt-3']"));
-        System.out.println(yesButtonText.getText());
+            System.out.println(yesButtonText.getText());
 
 
-        WebElement noButton=driver.findElement(By.xpath("//input[@type='radio'and@id='noRadio']"));
-            if (noButton.isSelected()) {
+             WebElement noButton=driver.findElement(By.xpath("//label[@for='noRadio']"));
+            if (!noButton.isSelected()) {
             noButton.click();}
             Thread.sleep(3000);
-            System.out.println(noButton.getText());
 
-            WebElement impressiveButton=driver.findElement(By.xpath("//input[@type='radio'and@id='impressiveRadio']"));
-            if(impressiveButton.isSelected())
+
+            WebElement impressiveButton=driver.findElement(By.xpath("//label[@for='impressiveRadio']"));
+            if(!impressiveButton.isSelected())
             {
                 impressiveButton.click();
             }
             Thread.sleep(3000);
-            System.out.println(impressiveButton.getText());
+            WebElement impressiveButtonText=  driver.findElement(By.xpath("//p[@class='mt-3']"));
+            System.out.println(yesButtonText.getText());
+
     }
 
     @After
