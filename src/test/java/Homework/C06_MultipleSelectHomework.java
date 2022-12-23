@@ -16,14 +16,13 @@ public class C06_MultipleSelectHomework extends BaseTest {
    @Test
    public void multipleSelectTest () throws InterruptedException {
        driver.get("https://demoqa.com/select-menu");
-       Select select=new Select(driver.findElement(By.xpath("(//div[@class=' css-1hwfws3'])[3]")));
+       Select select=new Select(driver.findElement(By.id("cars")));
        System.out.println(select.isMultiple());
-       select.selectByIndex(2);
+       select.selectByIndex(1);
        Thread.sleep(3000);
-       select.selectByValue("7");
+       select.selectByValue("audi");
        Thread.sleep(3000);
-       select.selectByVisibleText("Purple");
+       select.selectByVisibleText("Opel");
        Thread.sleep(3000);
-
    }
 }
