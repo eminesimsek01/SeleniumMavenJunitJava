@@ -46,7 +46,7 @@ public class DropDownFakerClass extends BaseTest {
         List<WebElement> inputs = driver.findElements(By.className("oxd-grid-item oxd-grid-item--gutters"));
         inputs.get(0).sendKeys(faker.name().firstName());
         inputs.get(1).sendKeys((CharSequence) faker.idNumber());
-        inputs.get(2).sendKeys(K);
+
 
     }
 }
