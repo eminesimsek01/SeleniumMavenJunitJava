@@ -3,6 +3,7 @@ package Homework;
 import Utilities.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class C09_AlertsTask extends BaseTest {
@@ -16,24 +17,38 @@ public class C09_AlertsTask extends BaseTest {
     And then sendKeys «BootcampCamp» (Please enter your name)
     Finally print on console this message "Hello BootcampCamp How are you today" assertion these message.
      */
+
+    @Override
+    public void tearDown() {
+
+    }
+
     @Test
-    public void alertTask(){
+    public void alertTask() throws InterruptedException {
         driver.get("http://demo.automationtesting.in/Alerts.html");
-        WebElement alertButton=driver.findElement(By.xpath("//a[@href='#OKTab']"));
-        alertButton.click();
+        WebElement alertOKbutton=driver.findElement(By.xpath("//a[@href='#OKTab']"));
+        alertOKbutton.click();
+        WebElement alertDisplayButton=driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
+        alertDisplayButton.click();
+        Thread.sleep(3000);
         driver.switchTo().alert().accept();
 
-        WebElement alertButtonWithOk=driver.findElement(By.xpath("//a[@href='#OKTab']"));
-        alertButtonWithOk.click();
-        alertButton.click();
+        WebElement alertButtonWithCancel=driver.findElement(By.xpath("//a[@href='#CancelTab']"));
+        alertButtonWithCancel.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         driver.switchTo().alert().accept();
-        WebElement alertButtonwithOKandCancel=driver.findElement(By.xpath("//a[@href='#CancelTab']"));
-        alertButton.click();
+        WebElement alertButtonwithText=driver.findElement(By.xpath("//a[@href='#Textbox']"));
+        alertButtonwithText.click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//button[@class='btn btn-info']")).click();
+        Thread.sleep(3000);
+        driver.switchTo().alert().sendKeys("BootcamCamp");
         driver.switchTo().alert().accept();
-        System.out.println(alertButton.getText());
-
-        //a[@class='analystic'and @aria-expanded='true']
-    }//a[@href='#OKTab']
+        Thread.sleep(3000);
+        WebElement demoYazı=driver.findElement(By.xpath("//p[@id='demo1']"));
+        System.out.println(demoYazı.getText());
+    }
 
 
 

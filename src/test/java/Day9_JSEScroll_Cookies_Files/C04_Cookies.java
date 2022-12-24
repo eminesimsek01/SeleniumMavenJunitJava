@@ -53,13 +53,24 @@ public class C04_Cookies extends BaseTest {
 
 
     }
-
     @Test
     public void deleteCookies() {
         driver.get("https://kitchen.applitools.com/ingredients/cookie");
+        Set<Cookie> allCookies = driver.manage().getCookies();
+        int numOfCookies = allCookies.size();
+        System.out.println("numOfCookies = " + numOfCookies); //numOfCookies = 2
+        Cookie addedCookie = new Cookie("drinks", "ayran"); //cookie olusturduk
+        driver.manage().addCookie(addedCookie); //cookie ekledik
+        allCookies = driver.manage().getCookies(); // sayfada var olan cookieleri dondurur
+        System.out.println("allCookies = " + allCookies.size()); //allCookies = 3
         System.out.println("delete cookies");
-        Cookie addedCookie=new Cookie("drinks","ayran");
-        driver.manage().addCookie(addedCookie);
+        driver.manage().deleteCookie(addedCookie); // cookie sildik
+        Assert.assertNull("cookie halen var", driver.manage().getCookieNamed(addedCookie.getName())); //PASSED
+        allCookies = driver.manage().getCookies(); // sayfada var olan cookieleri dondurur
+        System.out.println("allCookies = " + allCookies.size()); //allCookies = 2
+        driver.manage().deleteAllCookies(); //browserdan hepsi sildik
+        allCookies = driver.manage().getCookies(); // sayfada var olan cookieleri dondurur
+        System.out.println("allCookies = " + allCookies.size()); // allCookies = 0
 
     }
 }
