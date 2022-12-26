@@ -22,6 +22,7 @@ public class RobotClass extends BaseTest {
         search.sendKeys("json");
         Robot robot=new Robot();
         robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
 
     }
 }
