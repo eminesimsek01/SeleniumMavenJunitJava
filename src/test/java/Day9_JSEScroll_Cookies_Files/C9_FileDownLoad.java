@@ -40,7 +40,7 @@ public class C9_FileDownLoad extends BaseTest {
         Thread.sleep(5000); // Ne olur ne olmaz dosyanin inmesi icin bekliyoruz
 
         // Indirilen dosyamizin path i
-        String downloadPath = "C:\\Users\\user\\Downloads\\importData.csv";
+        String downloadPath = "C:\\Users\\mehmet\\Downloads\\importData.csv";
 
         // Dosyanin indirildigini kontrol ediyoruz
         Assert.assertTrue("Indirilen dosya bulunamadi", Files.exists(Paths.get(downloadPath)));

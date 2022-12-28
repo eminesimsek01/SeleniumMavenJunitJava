@@ -11,17 +11,17 @@ import java.util.Map;
 
 public class C02_ApachePoiTask {
 
-//    Add the excel file on the resources folder.
-//    Open the file.
-//    Open the workbook using file input stream.
-//    Open the first worksheet.
-//    Go to first row.
-//    Go to first cell on that first row and print.
-//    Go to second cell on that first row and print.
-//    Go to 2nd row first cell and assert if the data equal to Russia.
-//    Go to 3rd row 2nd cell-chain the row and cell.
-//    Find the number of used row.
-//    Print country, area key value pairs as map object.
+    //    Add the excel file on the resources folder.
+    //    Open the file.
+    //    Open the workbook using file input stream.
+    //    Open the first worksheet.
+    //    Go to first row.
+    //    Go to first cell on that first row and print.
+    //    Go to second cell on that first row and print.
+    //    Go to 2nd row first cell and assert if the data equal to Russia.
+    //    Go to 3rd row 2nd cell-chain the row and cell.
+    //    Find the number of used row.
+    //    Print country, area key value pairs as map object.
 
     @Test
     public void apacheTask() throws IOException {
