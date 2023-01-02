@@ -45,13 +45,9 @@ public class C03_WebTables extends BaseTest {
                 // her satirin sutunu
                 By locator = By.xpath(".//tr["+ i +"]//td[" + j + "]");
                 WebElement tableData = table.findElement(locator);
-
                 System.out.print(tableData.getText() + " ");
             }
-
             System.out.println();
-
-
         }
     }
 }

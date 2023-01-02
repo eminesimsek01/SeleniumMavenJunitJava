@@ -44,7 +44,6 @@ public class C9_FileDownLoad extends BaseTest {
 
         // Dosyanin indirildigini kontrol ediyoruz
         Assert.assertTrue("Indirilen dosya bulunamadi", Files.exists(Paths.get(downloadPath)));
-
     }
 
 }
