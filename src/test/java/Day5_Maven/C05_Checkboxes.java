@@ -7,6 +7,5 @@ public class C05_Checkboxes {
         //    Click on Checkbox.
         //    Verify if Home checkbox is selected.
         //    Verify that "You have selected" is visible.
-
     }
 }

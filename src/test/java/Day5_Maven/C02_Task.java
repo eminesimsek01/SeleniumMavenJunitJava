@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C02_Task {
     //https://www.teknosa.com/ adresine gidiniz.
     // Arama çubuğuna ''oppo'’ yazıp ENTER tıklayınız.
@@ -33,9 +32,7 @@ public class C02_Task {
     }
     @Test
     public void teknosaTest() throws InterruptedException {
-        //
         driver.get("https://www.teknosa.com/");
-
         //Arama alanı locate edilip istenen değer yazıldı.
         WebElement aramaAlani=driver.findElement(By.name("s"));//name='s'
         aramaAlani.sendKeys("oppo"+ Keys.ENTER);

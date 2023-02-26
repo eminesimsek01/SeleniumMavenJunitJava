@@ -13,7 +13,6 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C04_CheckBoxes {
     //    Go to https://the-internet.herokuapp.com/checkboxes
     //    Locate the elements of checkboxes.
@@ -52,5 +51,4 @@ public class C04_CheckBoxes {
     public void tearDown(){
         driver.quit();
     }
-
 }

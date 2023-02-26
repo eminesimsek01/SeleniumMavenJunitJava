@@ -13,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C06_RadioButtons {
     //    Go to URL:  https://www.facebook.com/
     //    Click on Create an Account button.
@@ -43,13 +42,10 @@ public class C06_RadioButtons {
         Assert.assertTrue(erkekbutton.isSelected());
         Assert.assertTrue(!kadınbutton.isSelected());
 
-
-
         ////input[@name='sex'and @value='1']
     }
     @After//Annotations
     public void tearDown(){
         driver.quit();
     }
-
 }
