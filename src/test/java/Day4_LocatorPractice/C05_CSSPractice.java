@@ -12,9 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C05_CSSPractice {
-
         //http://the-internet.herokuapp.com/add_remove_elements/
         // Click on the "Add Element" button 100 times.
         // Write a function that takes a number, and clicks the "Delete" button.
@@ -42,7 +40,6 @@ public class C05_CSSPractice {
             createElements(120);
             deleteButtonsAndValues(40);
         }
-
      public void createElements(int amount){
             WebElement addElementButton=driver.findElement(By.cssSelector("button[onclick='addElement()']"));
             for (int i=0; i<amount; i++){
@@ -58,7 +55,6 @@ public class C05_CSSPractice {
             deleteButonList.get(i).click();
         }
             //Silindikten sonraki buton sayısını buluruz
-
          List<WebElement>deletebuttonListAfter=driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
         int silinmedensonrakibuttonsayısı=deletebuttonListAfter.size();
             //İlk sayı ile son sayı arasındaki farkı doğrularız.

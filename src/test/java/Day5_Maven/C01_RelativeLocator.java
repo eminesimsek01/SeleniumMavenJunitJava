@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.time.Duration;
-
 public class C01_RelativeLocator {
     // Go to http://www.bestbuy.com
     // Verify that the page title contains "Best" Also, using Relative Locator.

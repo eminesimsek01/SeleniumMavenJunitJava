@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C02_LocatorPractice {
     //    Create the driver with BeforeClass and make it static inside the class.
     //    Go to http://www.google.com
@@ -60,7 +59,4 @@ public class C02_LocatorPractice {
         WebElement results=driver.findElement(By.id("result-stats"));
         System.out.println("results = " + results.getText());
     }
-
-
-
 }

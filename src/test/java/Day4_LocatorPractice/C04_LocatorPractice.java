@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C04_LocatorPractice {
     //Navigate to website https://testpages.herokuapp.com/styled/index.html
     // Under the ORIGINAL CONTENTS
