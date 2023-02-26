@@ -24,6 +24,7 @@ public class C02_Screenshots extends BaseTest {
 
         // Aldigimiz screenshot istedigimiz path e kaydediyoruz
         FileHandler.copy(kaynak, new File("test-output/Screenshots/n11PageScreenshot.png"));
+
     }
 
     @Test
@@ -37,10 +38,11 @@ public class C02_Screenshots extends BaseTest {
         // Element uzerinden screenshot umuzu aldikFile logoScreenshot = logo.getScreenshotAs(OutputType.FILE);
         File logoScreenshot = logo.getScreenshotAs(OutputType.FILE);
 
-        // Ozel isimler olabilmesi adina date imizi dosya isimlerimizin yanina ekledik
+        // Ozel isimler olabilmesi adina date imizi dosya isimlerimizin yanina ekledi
         String date = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
 
         String path = "test-output\\Screenshots\\logoScreenshot_" + date + ".png";
+        //test-output/Screenshots
 
         // Dosyamizi kaydettik
         FileUtils.copyFile(logoScreenshot, new File(path));

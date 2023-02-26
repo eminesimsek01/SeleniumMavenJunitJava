@@ -11,10 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C01_Locators {
     WebDriver driver;
-
     @Before
     public void setUp(){
         //Driver oluşturuldu
@@ -60,7 +58,6 @@ public class C01_Locators {
         WebElement email1=emailList.get(1);
         email1.sendKeys("Tag locator test");
     }
-
     @Test
     public void linkTextLocator(){
         //link test --> Şifrenizi mi unutunuz
@@ -79,7 +76,6 @@ public class C01_Locators {
         WebElement email=driver  //Absolute x path tavsiye edilmez, relative x path tavsiye edilir
             .findElement(By.xpath("/html/body/main/section[1]/div/div/form/div[2]/div[1]/input"));
         email.sendKeys("Absloute X path konusu başarı ile tamalandı");
-
     }
     @Test
     public void relativeXpath(){
@@ -87,7 +83,6 @@ public class C01_Locators {
         email.sendKeys("RelativeX path konusu başarı ile tamalandı");
         // //*[@id="session_key"]
     }
-
     @Test
     public void multipleAttributeXpath (){
         WebElement email=driver.findElement(By.xpath("//input[@class='input__input'][@type='text']"));
@@ -96,7 +91,6 @@ public class C01_Locators {
         //Tek attribute ile bir sonuca ulaşamazsak birden fazla attribute yazılabilir.
         ////input[@class='input__input'][@type='text']
         ////input[@class='input__input'and @type='text']
-
     }
     @Test
     public void andOrXpath (){
@@ -106,9 +100,7 @@ public class C01_Locators {
         //Tek attribute ile bir sonuca ulaşamazsak birden fazla attribute yazılabilir.
         ////input[@class='input__input'][@type='text']
         ////input[@class='input__input'and @type='text']
-
     }
-
     @Test
     public void containsXPath (){
         //xpath locator-->//input[contains(@id,session)]
@@ -116,7 +108,6 @@ public class C01_Locators {
         WebElement email=driver.findElement(By.xpath("//input[contains(@id,'session')]"));
         email.sendKeys("ContainsX path konusu başarı ile tamamlandı");
     }
-
     @Test
     public void startsWithXPath (){
         //xpath locator-->//input[starts-with(@id,session)]
@@ -124,7 +115,6 @@ public class C01_Locators {
         WebElement email=driver.findElement(By.xpath("//input[starts-with(@id,'session')]"));
         email.sendKeys("starts-with path konusu başarı ile tamamlandı");
     }
-
     @Test
     public void textXPath (){
         //xpath locator-->////button[contains(text(),'Oturum açın')]

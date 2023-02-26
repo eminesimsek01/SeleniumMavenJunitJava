@@ -3,7 +3,6 @@ package Day1_SeleniumMeaven;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class C01_WebDriverManagerTest {
    // Set Path.
    // Create chrome driver.
@@ -37,10 +36,5 @@ public class C01_WebDriverManagerTest {
 
        //driverımızı kapattık
        driver.quit();
-
-
-
-
    }
-
 }

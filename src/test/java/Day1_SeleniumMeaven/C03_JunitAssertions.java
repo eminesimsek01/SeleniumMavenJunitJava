@@ -10,9 +10,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class C03_JunitAssertions {
-
         //    Go to Amazon homepage.
         //    Do the following tasks by creating 3 different test methods.
         //    1- Test if the URL contains Amazon.
@@ -60,5 +58,4 @@ public class C03_JunitAssertions {
                 Point poisiton=logo.getLocation();
                 Assert.assertTrue("logo sol köşede görünmüyor",logo.isDisplayed());
         }
-
 }

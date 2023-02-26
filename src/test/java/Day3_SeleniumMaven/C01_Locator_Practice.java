@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C01_Locator_Practice {
      //    Go to https://www.linkedin.com/
      //    When we write an e-mail without the @ sign in the e-mail box and press enter.
@@ -31,9 +30,8 @@ public class C01_Locator_Practice {
     }
     @Test
     public void xpathPractice(){
-        //1.adım: Linkedin sitesine gidildi
+     //1.adım: Linkedin sitesine gidildi
     driver.get("https://www.linkedin.com/");
-
     //2.adım --> email alanında @ olmayan bir email adresi gir
         driver.findElement(By.xpath("//input[@id='session_key']"))
                 .sendKeys("Karl.clarusway.com"+ Keys.ENTER);
@@ -43,5 +41,4 @@ public class C01_Locator_Practice {
         //Assert.assertEquals(true,alertmessage.isDisplayed());
         //Assert.assertFalse(!alertmessage.isDisplayed());
     }
-
 }
